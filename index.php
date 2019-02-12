@@ -2,6 +2,8 @@
 date_default_timezone_set('Europe/Berlin');
 session_start();
 ob_start("ob_gzhandler");
+define('DEBUG_DATABASE', true);
+
 //require('./exaBD.php');
 function microtime_float() {
 	list($usec, $sec) = explode(" ", microtime());
