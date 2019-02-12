@@ -15,44 +15,44 @@ $news_content .= '
     	<div class="Border_2">
       		<div class="Border_3">
         		<div class="BoxContent" style="background-image:url('.$layout_name.'/images/global/content/scroll.gif);">';
-				//Show Tickers
-				$tickers = $SQL->query('SELECT * FROM '.$SQL->tableName('z_news_tickers').' ORDER BY '.$SQL->fieldName('date').' DESC LIMIT 7;');
-				$number_of_tickers = 0;
-				if(is_object($tickers))
-				{
-					foreach($tickers as $ticker) 
-					{
-						if(is_int($number_of_tickers / 2))
-							$color = "Odd";
-						else
-							$color = "Even";
+// 				//Show Tickers
+// 				$tickers = $SQL->query('SELECT * FROM '.$SQL->tableName('z_news_tickers').' ORDER BY '.$SQL->fieldName('date').' DESC LIMIT 7;');
+// 				$number_of_tickers = 0;
+// 				if(is_object($tickers))
+// 				{
+// 					foreach($tickers as $ticker) 
+// 					{
+// 						if(is_int($number_of_tickers / 2))
+// 							$color = "Odd";
+// 						else
+// 							$color = "Even";
 							
-						$tickers_to_add .= '
-							<div id="TickerEntry-'.$number_of_tickers.'" class="Row" onclick=\'TickerAction("TickerEntry-'.$number_of_tickers.'")\'>
-								<div class="'.$color.'">
-									<div class="NewsTickerIcon" style="background-image:url('.$layout_name.'/images/global/content/'.$ticker['icon'].'_small.gif)"></div>
-									<div id="TickerEntry-'.$number_of_tickers.'-Button" class="NewsTickerExtend" style="background-image:url('.$layout_name.'/images/global/general/plus.gif)"></div>
-									<div class="NewsTickerText">
-										<span class="NewsTickerDate">'.date("M j Y", $ticker['date']).' - </span>
-										<div id="TickerEntry-'.$number_of_tickers.'-ShortText" class="NewsTickerShortText">'.short_text($ticker['text'], 100).'</div>
-										<div id="TickerEntry-'.$number_of_tickers.'-FullText" class="NewsTickerFullText">'.$ticker['text'].'</div>
-									</div>
-								</div>
-							</div>';
-						$number_of_tickers++;
-					}
-				}
-				$news_content .= $tickers_to_add;
+// 						$tickers_to_add .= '
+// 							<div id="TickerEntry-'.$number_of_tickers.'" class="Row" onclick=\'TickerAction("TickerEntry-'.$number_of_tickers.'")\'>
+// 								<div class="'.$color.'">
+// 									<div class="NewsTickerIcon" style="background-image:url('.$layout_name.'/images/global/content/'.$ticker['icon'].'_small.gif)"></div>
+// 									<div id="TickerEntry-'.$number_of_tickers.'-Button" class="NewsTickerExtend" style="background-image:url('.$layout_name.'/images/global/general/plus.gif)"></div>
+// 									<div class="NewsTickerText">
+// 										<span class="NewsTickerDate">'.date("M j Y", $ticker['date']).' - </span>
+// 										<div id="TickerEntry-'.$number_of_tickers.'-ShortText" class="NewsTickerShortText">'.short_text($ticker['text'], 100).'</div>
+// 										<div id="TickerEntry-'.$number_of_tickers.'-FullText" class="NewsTickerFullText">'.$ticker['text'].'</div>
+// 									</div>
+// 								</div>
+// 							</div>';
+// 						$number_of_tickers++;
+// 					}
+// 				}
+// 				$news_content .= $tickers_to_add;
 					
-				$news_content .= '
-				</div>
-			</div>
-		</div>
-		<div class="Border_1" style="background-image: url('.$layout_name.'/images/global/content/border-1.gif);"></div>
-		<div class="CornerWrapper-b"><div class="Corner-bl" style="background-image: url('.$layout_name.'/images/global/content/corner-bl.gif);"></div></div>
-		<div class="CornerWrapper-b"><div class="Corner-br" style="background-image: url('.$layout_name.'/images/global/content/corner-br.gif);"></div></div>
-	</div>';
-//End Tickers
+// 				$news_content .= '
+// 				</div>
+// 			</div>
+// 		</div>
+// 		<div class="Border_1" style="background-image: url('.$layout_name.'/images/global/content/border-1.gif);"></div>
+// 		<div class="CornerWrapper-b"><div class="Corner-bl" style="background-image: url('.$layout_name.'/images/global/content/corner-bl.gif);"></div></div>
+// 		<div class="CornerWrapper-b"><div class="Corner-br" style="background-image: url('.$layout_name.'/images/global/content/corner-br.gif);"></div></div>
+// 	</div>';
+// //End Tickers
 
 //Featured Article
 	$news_content .= '
@@ -205,78 +205,78 @@ function showPost($topic, $text, $smile)
 											<tr>';
 											            
 
-										$guildsPower = $SQL->query('SELECT `name`, `id`, `frags_semana` from `guilds` ORDER BY `frags_semana` DESC LIMIT 4')->fetchAll();
+// 										$guildsPower = $SQL->query('SELECT `name`, `id`, `frags_semana` from `guilds` ORDER BY `frags_semana` DESC LIMIT 4')->fetchAll();
 
-												$main_content .= '<tr>';
-											foreach($guildsPower as $guildp) {
-												$main_content .= '
-													<td style="width: 25%; text-align: center;">
-														<a href="?subtopic=guilds&action=show&guild=' . $guildp['id'] . '"><img src="guild_image.php?id=' . $guildp['id'] . '" width="64" height="64" border="0"/><br />' . $guildp['name'] . '</a><br />' . $guildp['frags_semana'] . ' kills
-													</td>';
-											}
-												$main_content .= '
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-													</div>
-												</div>
-											<div class="TableShadowContainer">
-										<div class="TableBottomShadow" style="background-image: url('.$layout_name.'/images/global/content/table-shadow-bm.gif);">
-									<div class="TableBottomLeftShadow" style="background-image: url('.$layout_name.'/images/global/content/table-shadow-bl.gif);"></div>
-								<div class="TableBottomRightShadow" style="background-image: url('.$layout_name.'/images/global/content/table-shadow-br.gif);"></div>
-							</div>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-<br />';
-//Most Powerfull Guilds End
+// 												$main_content .= '<tr>';
+// 											foreach($guildsPower as $guildp) {
+// 												$main_content .= '
+// 													<td style="width: 25%; text-align: center;">
+// 														<a href="?subtopic=guilds&action=show&guild=' . $guildp['id'] . '"><img src="guild_image.php?id=' . $guildp['id'] . '" width="64" height="64" border="0"/><br />' . $guildp['name'] . '</a><br />' . $guildp['frags_semana'] . ' kills
+// 													</td>';
+// 											}
+// 												$main_content .= '
+// 																			</tr>
+// 																		</table>
+// 																	</td>
+// 																</tr>
+// 															</tbody>
+// 														</table>
+// 													</div>
+// 												</div>
+// 											<div class="TableShadowContainer">
+// 										<div class="TableBottomShadow" style="background-image: url('.$layout_name.'/images/global/content/table-shadow-bm.gif);">
+// 									<div class="TableBottomLeftShadow" style="background-image: url('.$layout_name.'/images/global/content/table-shadow-bl.gif);"></div>
+// 								<div class="TableBottomRightShadow" style="background-image: url('.$layout_name.'/images/global/content/table-shadow-br.gif);"></div>
+// 							</div>
+// 						</div>
+// 					</td>
+// 				</tr>
+// 			</tbody>
+// 		</table>
+// 	</div>
+// <br />';
+// //Most Powerfull Guilds End
 
-//Here start news
-	$last_threads = $SQL->query('SELECT ' . $SQL->tableName('players') . '.' . $SQL->fieldName('name') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_text') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_topic') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('icon_id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_icon_id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_smile') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('replies') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_date') . ' FROM ' . $SQL->tableName('players') . ', ' . $SQL->tableName('z_forum') . ' WHERE ' . $SQL->tableName('players') . '.' . $SQL->fieldName('id') . ' = ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('author_guid') . ' AND ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('section') . ' = 1 AND ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('first_post') . ' = ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('id') . ' ORDER BY ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_date') . ' DESC LIMIT ' . $config['site']['news_limit'])->fetchAll();
+// //Here start news
+// 	$last_threads = $SQL->query('SELECT ' . $SQL->tableName('players') . '.' . $SQL->fieldName('name') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_text') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_topic') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('icon_id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_icon_id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_smile') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('replies') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_date') . ' FROM ' . $SQL->tableName('players') . ', ' . $SQL->tableName('z_forum') . ' WHERE ' . $SQL->tableName('players') . '.' . $SQL->fieldName('id') . ' = ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('author_guid') . ' AND ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('section') . ' = 1 AND ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('first_post') . ' = ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('id') . ' ORDER BY ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_date') . ' DESC LIMIT ' . $config['site']['news_limit'])->fetchAll();
 
-	   $main_content .= '
-	   <div id = "face">
-<div class="fb-page" data-href="https://www.facebook.com/ntogran" data-tabs="timeline" data-width="450" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ntogran" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ntogran">Nto Gran</a></blockquote></div></div><br><br>
-';
+// 	   $main_content .= '
+// 	   <div id = "face">
+// <div class="fb-page" data-href="https://www.facebook.com/ntogran" data-tabs="timeline" data-width="450" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ntogran" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ntogran">Nto Gran</a></blockquote></div></div><br><br>
+// ';
 
 
-    if(isset($last_threads[0]))
-    {
-        foreach($last_threads as $thread)
-        {
-            $main_content .= '
-				<div class="NewsHeadline">
-					<div class="NewsHeadlineBackground" style="background-image:url('.$layout_name.'/images/global/content/newsheadline_background.gif)">
-						<img src="'.$layout_name.'/images/global/content/'.$thread['news_icon'].'.gif" class="NewsHeadlineIcon" alt=\'\' />
-						<div class="NewsHeadlineDate">'.date('M d Y', $thread['post_date']).' -</div>
-    					<div class="NewsHeadlineText">'.htmlspecialchars($thread['post_topic']).'</div>
-					</div>
-				</div>
-				<table style=\'clear:both\' border=0 cellpadding=0 cellspacing=0 width=\'100%\'>
-				<tr>';
-            $main_content .= '
-				<td style=\'padding-left:10px;padding-right:10px;\' >' . showPost('', $thread['post_text'], $thread['post_smile']) . '<br>';
-			if($group_id_of_acc_logged >= $config['site']['access_admin_panel'])
-				$main_content .= '
-					<p align="right"><a href="?subtopic=forum&action=edit_post&id=' . $thread['id'] . '">» Edit this news</a></p>';
-				$main_content .= '
-					<p align="right"><a href="?subtopic=forum&action=show_thread&id=' . $thread['id'] . '">» Comment on this news</a></p>
-				</td>';
+//     if(isset($last_threads[0]))
+//     {
+//         foreach($last_threads as $thread)
+//         {
+//             $main_content .= '
+// 				<div class="NewsHeadline">
+// 					<div class="NewsHeadlineBackground" style="background-image:url('.$layout_name.'/images/global/content/newsheadline_background.gif)">
+// 						<img src="'.$layout_name.'/images/global/content/'.$thread['news_icon'].'.gif" class="NewsHeadlineIcon" alt=\'\' />
+// 						<div class="NewsHeadlineDate">'.date('M d Y', $thread['post_date']).' -</div>
+//     					<div class="NewsHeadlineText">'.htmlspecialchars($thread['post_topic']).'</div>
+// 					</div>
+// 				</div>
+// 				<table style=\'clear:both\' border=0 cellpadding=0 cellspacing=0 width=\'100%\'>
+// 				<tr>';
+//             $main_content .= '
+// 				<td style=\'padding-left:10px;padding-right:10px;\' >' . showPost('', $thread['post_text'], $thread['post_smile']) . '<br>';
+// 			if($group_id_of_acc_logged >= $config['site']['access_admin_panel'])
+// 				$main_content .= '
+// 					<p align="right"><a href="?subtopic=forum&action=edit_post&id=' . $thread['id'] . '">» Edit this news</a></p>';
+// 				$main_content .= '
+// 					<p align="right"><a href="?subtopic=forum&action=show_thread&id=' . $thread['id'] . '">» Comment on this news</a></p>
+// 				</td>';
         
-			$main_content .= '
-				<td>
-					<img src="'.$layout_name.'/images/global/general/blank.gif" width=10 height=1 border=0 alt=\'\' />
-				</td>
-			</tr>
-		</table><br />';
-		}
-    }
+// 			$main_content .= '
+// 				<td>
+// 					<img src="'.$layout_name.'/images/global/general/blank.gif" width=10 height=1 border=0 alt=\'\' />
+// 				</td>
+// 			</tr>
+// 		</table><br />';
+// 		}
+//     }
     else
         $main_content .= '';
 
