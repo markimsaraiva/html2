@@ -12,14 +12,14 @@ $time = time();
 //////////////////////////////////////by  Aleh///////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 ///Queries ///
-// $query = $SQL->query('SELECT `players`.`name`,`players`.`id`,`players`.`level`, `players`.`experience`, `server_motd`.`id`, `server_motd`.`text` FROM `players`,`server_motd` WHERE `players`.`group_id` < '.$config['site']['players_group_id_block'].' AND `players`.`name` != "Account Manager" ORDER BY `players`.`level` DESC, `players`.`experience` DESC, `server_motd`.`id` DESC LIMIT 1;')->fetch();
-// $query2 = $SQL->query('SELECT `id`, `name` FROM `players` ORDER BY `id` DESC LIMIT 1;')->fetch();
-// $housesfree = $SQL->query('SELECT COUNT(*) FROM `houses` WHERE `owner`=0;')->fetch();
-// $housesrented = $SQL->query('SELECT COUNT(*) FROM `houses` WHERE `owner`=1;')->fetch();
-// $players = $SQL->query('SELECT COUNT(*) FROM `players` WHERE `id`>0;')->fetch();
-// $accounts = $SQL->query('SELECT COUNT(*) FROM `accounts` WHERE `id`>0;')->fetch();
-// $banned = $SQL->query('SELECT COUNT(*) FROM `bans` WHERE `id`>0;')->fetch();
-// $guilds = $SQL->query('SELECT COUNT(*) FROM `guilds` WHERE `id`>0;')->fetch();
+$query = $SQL->query('SELECT `players`.`name`,`players`.`id`,`players`.`level`, `players`.`experience`, `server_motd`.`id`, `server_motd`.`text` FROM `players`,`server_motd` WHERE `players`.`group_id` < '.$config['site']['players_group_id_block'].' AND `players`.`name` != "Account Manager" ORDER BY `players`.`level` DESC, `players`.`experience` DESC, `server_motd`.`id` DESC LIMIT 1;')->fetch();
+$query2 = $SQL->query('SELECT `id`, `name` FROM `players` ORDER BY `id` DESC LIMIT 1;')->fetch();
+$housesfree = $SQL->query('SELECT COUNT(*) FROM `houses` WHERE `owner`=0;')->fetch();
+$housesrented = $SQL->query('SELECT COUNT(*) FROM `houses` WHERE `owner`=1;')->fetch();
+$players = $SQL->query('SELECT COUNT(*) FROM `players` WHERE `id`>0;')->fetch();
+$accounts = $SQL->query('SELECT COUNT(*) FROM `accounts` WHERE `id`>0;')->fetch();
+$banned = $SQL->query('SELECT COUNT(*) FROM `bans` WHERE `id`>0;')->fetch();
+$guilds = $SQL->query('SELECT COUNT(*) FROM `guilds` WHERE `id`>0;')->fetch();
 ///End Queries ///
 
     $main_content .= '<table bgcolor='.$config['site']['darkborder'].' border=0 cellpadding=4 cellspacing=1 width=100%>
@@ -53,20 +53,20 @@ $main_content .= '<div class="NewsHeadline">
 <table border="0" cellspacing="3" cellpadding="4" width="100%">
         <tr>';
 
-foreach($SQL->query('SELECT `g`.`id` AS `id`, `g`.`name` AS `name`,
-        `g`.`logo_gfx_name` AS `logo`, COUNT(`g`.`name`) as `frags`
-FROM `killers` k
-        LEFT JOIN `player_killers` pk ON `k`.`id` = `pk`.`kill_id`
-        LEFT JOIN `players` p ON `pk`.`player_id` = `p`.`id`
-        LEFT JOIN `guild_ranks` gr ON `p`.`rank_id` = `gr`.`id`
-        LEFT JOIN `guilds` g ON `gr`.`guild_id` = `g`.`id`
-WHERE `k`.`unjustified` = 1 AND `k`.`final_hit` = 1
-        GROUP BY `name`
-        ORDER BY `frags` DESC, `name` ASC
-        LIMIT 0, 4;') as $guild)
-        $main_content .= '              <td style="width: 25%; text-align: center;">
-                        <a href="?subtopic=guilds&action=show&guild=' . $guild['id'] . '"><img src="guilds/' . ((!empty($guild['logo']) && file_exists('guilds/' . $guild['logo'])) ? $guild['logo'] : 'default_logo.gif') . '" width="64" height="64" border="0"/><br />' . $guild['name'] . '</a><br />' . $guild['frags'] . ' kills
-                </td>';
+// foreach($SQL->query('SELECT `g`.`id` AS `id`, `g`.`name` AS `name`,
+//         `g`.`logo_gfx_name` AS `logo`, COUNT(`g`.`name`) as `frags`
+// FROM `killers` k
+//         LEFT JOIN `player_killers` pk ON `k`.`id` = `pk`.`kill_id`
+//         LEFT JOIN `players` p ON `pk`.`player_id` = `p`.`id`
+//         LEFT JOIN `guild_ranks` gr ON `p`.`rank_id` = `gr`.`id`
+//         LEFT JOIN `guilds` g ON `gr`.`guild_id` = `g`.`id`
+// WHERE `k`.`unjustified` = 1 AND `k`.`final_hit` = 1
+//         GROUP BY `name`
+//         ORDER BY `frags` DESC, `name` ASC
+//         LIMIT 0, 4;') as $guild)
+//         $main_content .= '              <td style="width: 25%; text-align: center;">
+//                         <a href="?subtopic=guilds&action=show&guild=' . $guild['id'] . '"><img src="guilds/' . ((!empty($guild['logo']) && file_exists('guilds/' . $guild['logo'])) ? $guild['logo'] : 'default_logo.gif') . '" width="64" height="64" border="0"/><br />' . $guild['name'] . '</a><br />' . $guild['frags'] . ' kills
+//                 </td>';
 
 $main_content .= '      </tr>
 </table>';
