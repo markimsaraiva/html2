@@ -1,28 +1,48 @@
 <?php
 	$limitt = 100; 
 	$patentes = array(
-		1 => "Bronze IV",
-		2 => "Bronze III",
-		3 => "Bronze II",
-		4 => "Bronze I",
-		5 => "Silver IV",
-		6 => "Silver III",
-		7 => "Silver II",
-		8 => "Silver I",
-		9 => "Gold IV",
-		10 => "Gold III",
-		11 => "Gold II",
-		12 => "Gold I",
-		13 => "Platinum III",
-		14 => "Platinum II",
-		15 => "Platinum I",
-		16 => "Diamond III",
-		17 => "Diamond II",
-		18 => "Diamond I",
-		19 => "Master II",
-		20 => "Master I",
-		21 => "Challenger"
-
+		1 => "Soldado Raso",
+		2 => "Soldado de Primeira Classe",
+		3 => "Cabo",
+		4 => "Sargento",
+		5 => "Sargento-Ajudante 1",
+		6 => "Sargento-Ajudante 2",
+		7 => "Sargento-Chefe",
+		8 => "Sargento-Mestre 1",
+		9 => "Sargento-Mestre 2",
+		10 => "Sargento-Mestre 3",
+		11 => "Sargento-Mestre 4",
+		12 => "Sargento-Mor do Comando",
+		13 => "Segundo-Tenente 1",
+		14 => "Segundo-Tenente 2",
+		15 => "Segundo-Tenente 3",
+		16 => "Segundo-Tenente 4",
+		17 => "Primeiro-Tenente 1",
+		18 => "Primeiro-Tenente 2",
+		19 => "Primeiro-Tenente 3",
+		20 => "Primeiro-Tenente 4",
+		21 => "Primeiro-Tenente 5",
+		22 => "Capitao 1",
+		23 => "Capitao 2",
+		24 => "Capitao 3",
+		25 => "Capitao 4",
+		26 => "Capitao 5",
+		27 => "Major 1",
+		28 => "Major 2",
+		29 => "Major 3",
+		30 => "Major 4",
+		31 => "Major 5",
+		32 => "Tenente-Coronel 1",
+		33 => "Tenente-Coronel 2",
+		34 => "Tenente-Coronel 3",
+		35 => "Tenente-Coronel 4",
+		36 => "Tenente-Coronel 5",
+		37 => "Coronel 1",
+		38 => "Coronel 2",
+		39 => "Coronel 3",
+		40 => "Coronel 4",
+		41 => "Coronel 5",
+		42 => "General"
 	);
 	
 	$zap = $SQL->query('SELECT p.name,s.value as army_level FROM players p INNER JOIN player_storage s ON p.id = s.player_id WHERE s.key = 2014159 ORDER BY s.value DESC LIMIT 0,50;'); 
@@ -46,7 +66,7 @@
 			<b> '.$wynik['name'].' </b></a>
 		</td>
 		<td>
-			<img style="width:44px;height:44px;" src="/patentes/' . $wynik['army_level'] . '.png"/>  ' . $patente . '
+			<img style="width:30px;height:30px;" src="/patentes/' . $wynik['army_level'] . '.png"/>  ' . $patente . '
 		</td>
 	</tr>
 		';
@@ -55,7 +75,7 @@
 		</tr>	
 	</table>
 	</br>
-	<center>STAFF GRAN BAIAK</a>.</center>
+	<center>Desenvolvido por <a href="www.chaitosoft.com">ChaitoSoft.com</a>.</center>
 	';
 
 ?>

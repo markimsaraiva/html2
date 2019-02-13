@@ -220,7 +220,17 @@ elseif($action == 'pag_form')
 					<TD CLASS=white COLSPAN=3><B>Escolha o Método de Pagamento</B></TD> 
 				</TR> 
 				<TR BGCOLOR=#D4C0A1> 
-                               
+                                <TD><input type="radio" name="method" value="1" checked="checked"> PagSeguro - Cartão de crédito/boleto</TD>
+				
+				</TR>
+
+                                <TR BGCOLOR="#505050"> 
+				<TR BGCOLOR=#D4C0A1>
+
+					<TD><input type="radio" name="method" value="2"> Paypal - Credit Cards/International Transactions</TD>
+				</TR>
+				
+
                                 <TD><input type="radio" name="method" value="3"> Banco do Brasil e Caixa Economica - Depositos/DOCS/Transferencias Bancarias</TD>
 				</TR>
 								<TR BGCOLOR="#505050"> 
@@ -375,11 +385,10 @@ elseif($action == 'tipo')
         <tr bgcolor="#505050"><td colspan="1" class="white"><center><b>Informa&ccedil;&otilde;es da Conta</b></center></td></tr>
 
 
-        <tr bgcolor="#D4C0A1"><td>Nome: Samuel Ribeiro Silva<br>
+        <tr bgcolor="#D4C0A1"><td>Nome: Clayton Andrey Guths<br>
 Banco: Caixa Economica<br>
-Ag&ecirc;ncia: 2909<br>
-Op: 013<br>
-Conta Poupança: 15326-4<br>
+Ag&ecirc;ncia: 1544<br>
+Conta Poupança: 39542-3<br>
 
 <p><img src=http://autoblogg.com/wp-content/uploads/2014/03/caixloter.jpg>
 
@@ -394,15 +403,15 @@ Conta Poupança: 15326-4<br>
 
 <table border="0" cellspacing="1" cellpadding="4" width="100%">
         <tr bgcolor="#505050"><td colspan="1" class="white"><center><b>Informa&ccedil;&otilde;es da Conta</b></center></td></tr>
-        <tr bgcolor="#D4C0A1"><td>Nome: Samuel Ribeiro Silva<br>
+        <tr bgcolor="#D4C0A1"><td>Nome: Clayton Andrey Guths<br>
 Banco: Banco do Brasil<br>
-Ag&ecirc;ncia: 3143-7<br>
-Conta Corrente: 23219-x<br>
+Ag&ecirc;ncia: 3126-7<br>
+Conta Corrente: 85544-8<br>
 
 <p><img src=http://images.all-free-download.com/images/graphicthumb/banco_do_brasil_1_132882.jpg>
 
 <p>Procedimento para compras com depósitos bancários:
-Após efetuar o depósito pedimos que mande um email com o comprovante de confirmação da doação para <font color=green> ribeirot.serv@gmail.com</font> com foto para anexo e
+Após efetuar o depósito pedimos que mande um email com o comprovante de confirmação da doação para <font color=green> claytonguths@hotmail.com</font> com foto para anexo e
 com o seguinte conteúdo:
 #Nome do char
 #Valor do depósito

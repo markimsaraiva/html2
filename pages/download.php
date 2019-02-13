@@ -83,15 +83,15 @@ if($action == "downloadagreement"){
 																			<table style="margin-top: 15px; text-align: center;" >
 																				<tr>
 																					<td>
-																						<a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/windowsclient\');NoteDownload(\'windowsclient\');" href="http://download848.mediafire.com/ltdy3kezlgwg/p4zgt3jc6pmoch2/RibeirOT.exe'.$config['site']['server_version'].'.exe" type="application/octet-stream" target="_top" >
+																						<a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/windowsclient\');NoteDownload(\'windowsclient\');" href="http://static.tibia.com/download/tibia'.$config['site']['server_version'].'.exe" type="application/octet-stream" target="_top" >
 																							<img style="width: 90; height: 90px; border: 0px;" src="'.$layout_name.'/images/account/download_windows.gif" />
 																						</a><br/>
-																						<a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/windowsclient\');NoteDownload(\'windowsclient\');" href="http://download848.mediafire.com/ltdy3kezlgwg/p4zgt3jc6pmoch2/RibeirOT.exe'.$config['site']['server_version'].'.exe" type="application/octet-stream" target="_top" >Windows&#160;RibeirOT<br/>
+																						<a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/windowsclient\');NoteDownload(\'windowsclient\');" href="http://static.tibia.com/download/tibia'.$config['site']['server_version'].'.exe" type="application/octet-stream" target="_top" >Windows&#160;Tibia<br/>
 																						Client '.$config['site']['server_version_2'].'</a></td>
-																					<td><a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/linuxclient\');NoteDownload(\'linuxclient\');" href="https://static.otland.net/ipchanger.exe" type="application/octet-stream" target="_top" >
+																					<td><a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/linuxclient\');NoteDownload(\'linuxclient\');" href="files/ipchanger.exe" type="application/octet-stream" target="_top" >
 																						<img style="width: 110px; height: 90px; border: 0px;" src="'.$layout_name.'/images/account/ipchanger.png" />
 																					</a><br/>
-																						<a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/linuxclient\');NoteDownload(\'linuxclient\');" href="https://static.otland.net/ipchanger.exe" type="application/octet-stream" target="_top" >DOWNLOAD Ip Changer
+																						<a onMouseDown="javascript:pageTracker._trackPageview(\'/account/downloadclient/linuxclient\');NoteDownload(\'linuxclient\');" href="files/ipchanger.exe" type="application/octet-stream" target="_top" >IpChanger
 																					</a></td>
 																				</tr>
 																				<tr>
@@ -119,18 +119,19 @@ if($action == "downloadagreement"){
 															<div class="TableContentContainer" >
 																<table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" >
 																	<tr>
-																		<td style="height: 290px; vertical-align: top;" ><a href="http://ribeirot.servegame.com/?subtopic=accountmanagement" ><img style="position: absolute; float: right; right: 0px; border: 0px; width: 161px; height: 209px;" /></a><img style="left: 0px; border: 0px; width: 208px; height: 26px; margin-top: 5px;" /><br/>
-																			<img style="left: 0px; border: 0px; width: 208px; height: 26px; margin-top: 15px;" /><br/>
-																			<div style="left: 3px;" >CRIE SUA CONTA E COMECE A JOGAR NO RibeirOT Server!<br/>
-																				button in your <a href="http://ribeirot.servegame.com/?subtopic=createaccount" >CRIAR SUA CONTA</a>!</div>
-																			<img style="left: 0px; border: 0px; width: 208px; height: 26px; margin-top: 15px;"  /><br/>
-																			<div style="left: 3px;" >Se Divirta com o OTSERV dos SONHOS!<br/>
-																				DIVERSAS HUNTS!<br/>
-																				EVENTOS O DIA INTEIRO!<br/>
-																				PVP EQUILIBRADO!<br/>
-																				PREMIOS EM DINHEIRO!<br/>
+																		<td style="height: 290px; vertical-align: top;" ><a href="https://secure.tibia.com/account/?subtopic=accountmanagement&page=overview" ><img style="position: absolute; float: right; right: 0px; border: 0px; width: 161px; height: 209px;" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/account/flash-client-character-list.png" /></a><img style="left: 0px; border: 0px; width: 208px; height: 26px; margin-top: 5px;" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/account/flash-client.gif" /><br/>
+																			<img style="left: 0px; border: 0px; width: 208px; height: 26px; margin-top: 15px;" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/account/flash-text-1.gif" /><br/>
+																			<div style="left: 3px;" >Just log in to your account and start<br/>
+																				playing Tibia by a click on the <a href="https://secure.tibia.com/account/?subtopic=accountmanagement&page=overview" >play</a><br/>
+																				button in your <a href="https://secure.tibia.com/account/?subtopic=accountmanagement&page=overview" >character list</a>!</div>
+																			<img style="left: 0px; border: 0px; width: 208px; height: 26px; margin-top: 15px;" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/account/flash-text-2.gif" /><br/>
+																			<div style="left: 3px;" >Play without downloading!<br/>
+																				Play without installing!<br/>
+																				Enjoy a more user-friendly interface!<br/>
+																				Enjoy your Client settings on every computer!<br/>
+																				Run Tibia in every supported web browser!<br/>
 																			</div>
-														
+																			<div style="min-width: 390px; text-align: center; margin-top: 15px;" >[<span class="HelpLink" style="width: 18px; height: 18px;" ><a href="../common/help.php?subtopic=flashplayer" target="_blank" ><span class="HelperDivIndicator" onMouseOver="ActivateHelperDiv($(this), \'Adobe Flash Player:\', \'<p>You need the <b>Adobe Flash Player</b> (version 11.2.0 or higher) installed to use the Flash client!</p><p><b>Note:</b> If you have JavaScript deactivated, we cannot detect your Adobe Flash Player version!</p>\');" onMouseOut="$(\'#HelperDivContainer\').hide();" >system requirements</span></a></span>]</div></td>
 																	</tr>
 																</table>
 															</div>

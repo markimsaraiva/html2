@@ -219,24 +219,23 @@ elseif($action == 'pag_form')
 				<TR BGCOLOR="#505050"> 
 					<TD CLASS=white COLSPAN=3><B>Escolha o Método de Pagamento</B></TD> 
 				</TR> 
-				<TR BGCOLOR=#D4C0A1> 				
+				<TR BGCOLOR=#D4C0A1> 
+                                <TD><input type="radio" name="method" value="1" checked="checked"> PagSeguro - Cartão de crédito/boleto</TD>
+				
+				</TR>
+
+                                <TR BGCOLOR="#505050"> 
+				<TR BGCOLOR=#D4C0A1>
+
+					<TD><input type="radio" name="method" value="2"> Paypal - Credit Cards/International Transactions</TD>
+				</TR>
+				
 
                                 <TD><input type="radio" name="method" value="3"> Banco do Brasil e Caixa Economica - Depositos/DOCS/Transferencias Bancarias</TD>
 				</TR>
 								<TR BGCOLOR="#505050"> 
 				<TR BGCOLOR=#D4C0A1>
-				
-				<TD><input type="radio" name="method" value="2"> PAYPAL</TD>
-				</TR>
-								<TR BGCOLOR="#505050"> 
-				<TR BGCOLOR=#D4C0A1>
-				
-				<TD><input type="radio" name="method" value="1"> PAGSEGURO</TD>
-				</TR>
-								<TR BGCOLOR="#505050"> 
-				<TR BGCOLOR=#D4C0A1>
-				
-			
+ 
 												
 								
 				
@@ -262,110 +261,119 @@ elseif($action == 'tipo')
 		if($buy_tipo == 1) {		
         $main_content .= '
 <table><tr><td> 
-<div style="width: 0%">
-<center>
-<form method="post" target="_new" action="https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx" name="LOGIN" class="formulario" style="width: 450px; margin: 0 0 10px 0; float: left;">
-
-<p>
-<input type="hidden" name="email_cobranca" value="markimsaraiva@gmail.com">
-
-<input type="hidden" name="tipo" value="CP"> 
-
-<input type="hidden" name="moeda" value="BRL"> 
-
-<input type="hidden" name="item_id_1" value="2000050"> 
-
-<br><table border="0"><tbody><tr border="2"><td bgcolor="#505050" class="white"><center><strong>Nome do seu character (sem erro):</strong></center></td></tr></tbody></table> 
-
-<table border="1"><tbody><tr border="2"><td bgcolor="white"><input type="text" name="item_descr_1"></td></tr></tbody></table><br> 
+<form method="post" target="_new" action="https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx" name="LOGIN" class="formulario">
+<input type="hidden" name="ref_transacao" value="'.$account_logged->getName().'" />
+<input type="hidden" name="email_cobranca" value="claytonguths@hotmail.com">
+<input type="hidden" name="tipo" value="CP">
+<input type="hidden" name="moeda" value="BRL">
+<input type="hidden" name="item_id_1" value="2000050">
+<table><tbody><tr><td><strong>Nome do Seu Character (Sem erro):</strong></td></tr></tbody></table>
+<table><tbody><tr><td><input type="text" name="item_descr_1"></td></tr></tbody></table><br> 
 
 <input type="hidden" name="item_quant_1" value="1"> 
+<table><tbody><tr>
+<td width="153"><span class="style11 style4">
+<strong>Valor do pagamento:</strong>
+</span>
+</td>
+</tr>
+</tbody></table> 
 
-<br><table border="0"><tbody><tr border="2"><td width="153" bgcolor="#505050" class="white"><span class="style11 style4"><center><strong>Valor da Doa&ccedil;&atilde;o:</center></strong></span></td>
+<table border="0"><tbody><tr>
 
-</tr></tbody></table> 
-
-<table border="0"><tbody><tr border="2">
-
-  <td width="96" bgcolor="grey"><label>
+  <td width="96"><label>
 
     <select name="item_valor_1" id="item_valor_1" tabindex="2">
 
       <option selected>Selecione</option>
 
-      <option value="5,00">5 Points</option>
+      
+     <option value="5,00">R$5,00</option>
 
-      <option value="10,00">10 Points</option>
+      <option value="10,00">R$10,00</option>
+
+      <option value="15,00">R$15,00</option>
+
+      <option value="20,00">R$20,00</option>
+ 
+      <option value="25,00">R$25,00</option>
+
+      <option value="30,00">R$30,00</option>
+ 
+      <option value="35,00">R$35,00</option>
+     
+      <option value="40,00">R$40,00</option>
+
+      <option value="45,00">R$45,00</option>
+
+      <option value="50,00">R$50,00</option>
+
+      <option value="55,00">R$55,00</option>
+ 
+      <option value="60,00">R$60,00</option>
+
+      <option value="65,00">R$65,00</option>       
+
+      <option value="70,00">R$70,00</option>
+      
+      <option value="75,00">R$75,00</option>
+
+      <option value="80,00">R$80,00</option>
+   
+      <option value="85,00">R$85,00</option>
+
+
+      <option value="90,00">R$90,00</option>
+
+      <option value="100,00">R$100,00</option>
+
+      <option value="110,00">R$110,00</option>
+
+      <option value="120,00">R$120,00</option>
+
+      <option value="130,00">R$130,00</option>
+
+      <option value="140,00">R$140,00</option>
+
+      <option value="150,00">R$150,00</option>
+
+      <option value="160,00">R$160,00</option>
+
+      <option value="170,00">R$170,00</option>
+ 
+      <option value="180,00">R$180,00</option>
+
+      <option value="190,00">R$190,00</option>
+ 
+      <option value="200,00">R$200,00</option>
 	
-      <option value="15,00">15 Points</option>
+      <option value="250,00">R$250,00</option>
+	
+      <option value="300,00">R$300,00</option>
+	
+      <option value="350,00">R$350,00</option>
+	
+      <option value="400,00">R$400,00</option>
+	
+	<option value="500,00">R$500,00</option>
 
-      <option value="20,00">20 Points</option>
-
-      <option value="30,00">30 Points</option>
-
-      <option value="40,00">40 Points</option>
-
-      <option value="50,00">50 Points</option>
-
-      <option value="60,00">60 Points</option>
-
-      <option value="70,00">70 Points</option>
-
-      <option value="80,00">80 Points</option>
-
-      <option value="90,00">90 Points</option>
-
-      <option value="100,00">100 Points</option>
-
-      <option value="110,00">110 Points</option>
-
-      <option value="120,00">120 Points</option>
-
-      <option value="130,00">130 Points</option>
-
-      <option value="140,00">140 Points</option>
-
-      <option value="150,00">150 Points</option>
-	  
-	   <option value="150,00">150 Points</option>
-	   
-    <option value="160,00">160 Points</option>
-		
-	 <option value="170,00">170 Points</option>
-	 
-	 <option value="180,00">180 Points</option>
-	 
-	 <option value="190,00">190 Points</option>
-	 
-	 <option value="200,00">200 Points</option>
 
                                 </select>
 
-  </label>
-
-
-</td>
-</tr>
-
-<input type="hidden" name="item_frete_1" value="000"> 
-
- 
-
-<table border="1"><tbody><tr border="2"></br><td bgcolor="#505050"><input type="submit" value="Finalizar Doacao"></td></tr></tbody></table> 
-</td>
+  </label></td>
 
 </tr></tbody></table>
-</p>
 
-
-<div></div> 
 
 </td>
 </tr>
 <br> 
 
 <br> 
- 
+
+<input type="hidden" name="item_frete_1" value="000">  
+
+<table><tbody><tr><td><input type="submit" value="Finalizar Compra"></td></tr></tbody></table> 
 ';
 			}
 				if($buy_tipo == 3) {		
@@ -374,11 +382,10 @@ elseif($action == 'tipo')
         <tr bgcolor="#505050"><td colspan="1" class="white"><center><b>Informa&ccedil;&otilde;es da Conta</b></center></td></tr>
 
 
-        <tr bgcolor="#D4C0A1"><td>Nome: Marcos Vinicius S.A.C. <br>
+        <tr bgcolor="#D4C0A1"><td>Nome: Clayton Andrey Guths<br>
 Banco: Caixa Economica<br>
-Ag&ecirc;ncia: 2256<br>
-Conta Poupança: 22944-0<br>
-Operação: 013 <br>
+Ag&ecirc;ncia: 1544<br>
+Conta Poupança: 39542-3<br>
 
 <p><img src=http://autoblogg.com/wp-content/uploads/2014/03/caixloter.jpg>
 
@@ -393,21 +400,21 @@ Operação: 013 <br>
 
 <table border="0" cellspacing="1" cellpadding="4" width="100%">
         <tr bgcolor="#505050"><td colspan="1" class="white"><center><b>Informa&ccedil;&otilde;es da Conta</b></center></td></tr>
-        <tr bgcolor="#D4C0A1"><td>Nome: Marcos Vinicius S.A.C. <br>
+        <tr bgcolor="#D4C0A1"><td>Nome: Clayton Andrey Guths<br>
 Banco: Banco do Brasil<br>
-Ag&ecirc;ncia: 3288-3<br>
-Conta Corrente: 140778-3<br>
+Ag&ecirc;ncia: 3126-7<br>
+Conta Corrente: 85544-8<br>
 
 <p><img src=http://images.all-free-download.com/images/graphicthumb/banco_do_brasil_1_132882.jpg>
 
 <p>Procedimento para compras com depósitos bancários:
-Após efetuar o depósito pedimos que mande um email com o comprovante de confirmação da doação para <font color=green> granbaiak@gmail.com</font> ou Whatsapp +55 62 9 8220 8960 com foto para anexo e
+Após efetuar o depósito pedimos que mande um email com o comprovante de confirmação da doação para <font color=green> claytonguths@hotmail.com</font> com foto para anexo e
 com o seguinte conteúdo:
 #Nome do char
 #Valor do depósito
 
 Pedimos que aguarde a confirmação!
-Prazo para entrega dos points é até 24 horas.
+Prazo para entrega dos points é 24 horas.
 
 
 
@@ -496,46 +503,28 @@ Prazo para entrega dos points é até 24 horas.
 			<tr bgcolor="#D4C0A1"><td width="100"><b>M&eacute;todo de pagamento:</b></td><td width="550" colspan="2">PayPal</TD></tr>	
 			<tr bgcolor="#D4C0A1"><td width="100"><b>Account:</b></td><td width="550" colspan="2">'.$account_logged->getName().'</td></tr>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			<tr bgcolor="#D4C0A1"><td width="100"><b>Pontos:</b></td><td width="550" colspan="2"><select name="amount">
   <option value="10.00">10 R$</option>
   <option value="20.00">20 R$</option>
   <option value="30.00">30 R$</option>
   <option value="40.00">40 R$</option>
   <option value="50.00">50 R$</option>
-  <option value="60.00">60 R$</option>
-  <option value="70.00">70 R$</option>
-  <option value="80.00">80 R$</option>
-  <option value="90.00">90 R$</option>
-  <option value="100.00">100 R$</option>
-  <option value=110.00">110 R$</option>
-  <option value="120.00">120 R$</option>
-  <option value="130.00">130 R$</option>
-  <option value="140.00">140 R$</option>
-  <option value="150.00">150 R$</option>
-  <option value="160.00">160 R$</option>
-  <option value="170.00">170 R$</option>
-  <option value="180.00">180 R$</option>
-  <option value="190.00">190 R$</option>
-  <option value="200.00">200 R$</option>
-  <option value="210.00">210 R$</option>
-  <option value="220.00">220 R$</option>
-  <option value="230.00">230 R$</option>
-  <option value="240.00">240 R$</option>
-  <option value="250.00">250 R$</option>
-  <option value="260.00">260 R$</option>
-  <option value="270.00">270 R$</option>
-  <option value="280.00">280 R$</option>
-  <option value="290.00">290 R$</option>
-  <option value="300.00">300 R$</option>
 </select></td></tr>		
 			</TABLE><BR> 
 <input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="granbaiak@gmail.com">
+<input type="hidden" name="business" value="">
 <input type="hidden" name="lc" value="BR">
-<input type="hidden" name="item_name" value="Gran Baiak">
+<input type="hidden" name="item_name" value="Pontos na account de nome: '.$account_logged->getCustomField("name").'">
+<input type="hidden" name="custom" value="'.$account_logged->getCustomField("name").'">
+<input type="hidden" name="item_number" value="1">
 <input type="hidden" name="currency_code" value="BRL">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="no_shipping" value="0">
+<input type="hidden" name="notify_url" value="http://start-global.net/ipn.php">
+<input type="hidden" name="return" value="http://start-global.net">
+<input type="hidden" name="rm" value="0">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG_global.gif:NonHosted">
 
 <BR> 
 			<table style="width:100%;" ><tr align="center" ><td>

@@ -18,7 +18,7 @@ $main_content .='<h2><center><h1>Confirmando sua Doacao<h1></center>
 
 	<tr widht="100%" bgcolor="#F1E0C6">
 
-		<td><b> Envie para o email ribeirot.serv@gmail.com os seguintes dados abaixo</b></td>
+		<td><b> Envie para o email baiaknewpayment@gmail.com os seguintes dados abaixo</b></td>
 
 	</tr>
 
@@ -57,3 +57,4 @@ $main_content .='<h2><center><h1>Confirmando sua Doacao<h1></center>
 ';
 
 ?>
+

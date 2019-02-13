@@ -1,5 +1,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <html>
+<script language=JavaScript>
+<!--
+var mensagem="";
+function clickIE() {if (document.all) {(mensagem);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(mensagem);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+document.oncontextmenu=new Function("return false")
+// --> 
+</script>
 <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
 <script type="text/javascript">
   if(top.location != window.location) {
@@ -45,6 +58,25 @@ var FB_ForceReload = 0;
     top.location = self.location;
   }
 </script>
+<div style="position:absolute; top:-32px; left:490px;">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>HTML5 Audio</title>
+
+ 
+
+
+<audio controls="">
+&nbsp;&nbsp;&nbsp;&nbsp;<source src="rap.mp3" type="audio/mp3">
+</audio>
+
+
+ 
+
+
+
+</div>
+
 
 <script type="text/javascript" src="<?PHP echo $layout_name; ?>/initialize.js"></script>
 
@@ -154,18 +186,6 @@ var FB_ForceReload = 0;
     								<div class="RightChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
   								</div>
 							</a>
-							<!-- regras -->
-							<!--<a href="?subtopic=regras">
-  								<div id="submenu_regras" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
-    								<div class="LeftChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
-									<div id="ActiveSubmenuItemIcon_regras" class="ActiveSubmenuItemIcon" style="background-image: url(<?PHP echo $layout_name; ?>/images/menu/icon-activesubmenu.gif);"></div>
-									<div id="ActiveSubmenuItemLabel_regras" class="SubmenuitemLabel"><span style="color:white;text-shadow: #9400D3 1px 1px 10px;"><img src="" alt=""><span style="background: transparent url(/layouts/tibiarl/images/menu/bg_menu.gif)">Regras <small><font color="#3ea7fa">[new]</font></small></span></span></div>
-									<div class="RightChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
-  								</div>
-								</a> -->
-							
-							
-							
 							<a href="?subtopic=archive">
   								<div id="submenu_archive" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
     								<div class="LeftChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
@@ -181,15 +201,6 @@ var FB_ForceReload = 0;
 									<div id="ActiveSubmenuItemLabel_cast" class="SubmenuitemLabel"><span style="color:white;text-shadow: #9400D3 1px 1px 10px;"><img src="" alt=""><span style="background: transparent url(/layouts/tibiarl/images/menu/bg_menu.gif)">Cast System</span></span></div>
 									<div class="RightChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
   								</div>
-								<a href="?subtopic=download">
-  								<div id="submenu_download" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
-    								<div class="LeftChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
-									<div id="ActiveSubmenuItemIcon_downloads" class="ActiveSubmenuItemIcon" style="background-image: url(<?PHP echo $layout_name; ?>/images/menu/icon-activesubmenu.gif);"></div>
-									<div id="ActiveSubmenuItemLabel_downloads" class="SubmenuitemLabel"><span style="color:white;text-shadow: #9400D3 1px 1px 10px;"><img src="" alt=""><span style="background: transparent url(/layouts/tibiarl/images/menu/bg_menu.gif)">Downloads <small><font color="#3ea7fa">[new]</font></small></span></span></div>
-									<div class="RightChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
-  								</div>
-								
-								
 								<a href="?subtopic=shopoff">
   								<div id="submenu_shopoff" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
     								<div class="LeftChain" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/chain.gif);"></div>
@@ -670,6 +681,13 @@ var FB_ForceReload = 0;
 	<script type="text/javascript">InitializePage();</script></div>
     	<div id="ContentColumn">
         	<div id="Content" class="Content">
+<div style="position:absolute; top:-32px; left:490px;">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>HTML5 Audio</title>
+<audio controls>
+&nbsp;&nbsp;&nbsp;&nbsp;<source src="rap.mp3" type="audio/mp3">
+</audio>
+</div>
             	<div id="ContentHelper">
 				<script type="text/javascript" src="<?PHP echo $layout_name; ?>/newsticker.js"></script>
 				<?PHP echo $news_content; ?>
@@ -846,6 +864,71 @@ $skills = $SQL->query('SELECT * FROM players WHERE deleted = 0 AND group_id = 1 
     <div class="Bottom" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/box-bottom.gif); margin-top: 70px;; margin-left:-5px;">
 </div>	
 </div>
+
+
+  
+
+
+<div id="fb-root"></div>
+
+
+</br>
+
+
+
+<?PHP
+$time = time();
+$viewpoll = $SQL->query('SELECT * FROM z_polls where end > '.$time.' ORDER BY id DESC LIMIT 1');
+foreach($viewpoll as $p)
+$polls .= '<center>'.$p['question'].'</center>';
+    if(count($p['id']) > 0)
+     echo '<div id="CurrentPollBox" class="Themebox" style="background-image:url('.$layout_name.'/images/themeboxes/current-poll/currentpollbox.gif);">
+      <div id="CurrentPollText">'.$polls.'</div>
+      <a class="ThemeboxButton" href="?subtopic=polls&id= '.$p['id'].'" onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" style="background-image:url('.$layout_name.'/images/buttons/sbutton.gif);"><div class="BigButtonOver" style="background-image:url('.$layout_name.'/images/buttons/sbutton_over.gif);"></div>
+        <div class="ButtonText" style="background-image:url('.$layout_name.'/images/buttons/_sbutton_votenow.gif);"></div>
+      </a>
+    <div class="Bottom" style="background-image:url('.$layout_name.'/images/general/box-bottom.gif);"></div>
+    </div>';
+?>
+						
+						
+
+						<!-- networks theme box -->
+						<?PHP
+						$nF = $SQL->query("SELECT " .$SQL->fieldName('network_link'). " FROM " .$SQL->tableName('z_network_box'). " WHERE " .$SQL->fieldName('network_name'). " = 'facebook'")->fetch();
+						$nT = $SQL->query("SELECT " .$SQL->fieldName('network_link'). " FROM " .$SQL->tableName('z_network_box'). " WHERE " .$SQL->fieldName('network_name'). " = 'twitter'")->fetch();
+						?>
+						<?PHP if(!empty($nF)){ ?>
+						<div id="NetworksBox" class="Themebox" style="background-image:url(<?PHP echo $layout_name; ?>/images/themeboxes/networks/networksbox.png);">
+  							<div id="FacebookBlock">
+    							<div id="FacebookLikeBox">
+      								<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/<?PHP echo $nF['network_link']; ?>" data-width="175" data-height="180" data-show-faces="true" data-stream="false" data-border-color="none" data-header="false" fb-xfbml-state="rendered">
+										<span style="vertical-align: bottom; width: 181px; height: 180px;">
+										</span>
+									</div>
+    							</div>
+    							<div id="FacebookSendBox">
+      								<div class="fb-send fb_iframe_widget" data-href="https://www.facebook.com/<?PHP echo $nF['network_link']; ?>" data-width="50" data-height="20" fb-xfbml-state="rendered">
+										<span style="vertical-align: bottom; width: 50px; height: 20px;">
+										</span>
+									</div>
+    							</div>
+    							<div id="FacebookLikes">
+      								<div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="https://www.facebook.com/<?PHP echo $nF['network_link']; ?>" data-send="false" data-width="225" data-show-faces="false" fb-xfbml-state="rendered">
+										<span style="height: 28px; width: 225px;">
+										</span>
+									</div>
+    							</div>
+  							</div>
+							<?PHP if(!empty($nT)){ ?>
+  							<div id="TwitterBlock">
+    							<a href="https://twitter.com/<?PHP echo $nT['network_link']; ?>" class="twitter-follow-button" data-show-count="false">Follow @<?PHP echo $nT['network_link']; ?></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  							</div>
+							<?PHP } ?>
+  							<div class="Bottom" style="background-image:url(<?PHP echo $layout_name; ?>/images/general/box-bottom.gif);"></div>
+						</div>
+						<?PHP } ?>
 						<?PHP if($config['site']['screenshot_page']){ ?>
   						<!-- screenshot theme box -->
   						<div id="ScreenshotBox" class="Themebox" style="background-image:url(<?PHP echo $layout_name; ?>/images/themeboxes/screenshot/screenshotbox.gif);">
@@ -916,8 +999,7 @@ $skills = $SQL->query('SELECT * FROM players WHERE deleted = 0 AND group_id = 1 
 </script>
 <div id="fbplikebox" style="right: -250px; top: 100px;">
     <div class="fbplbadge"></div> 
-	
-    <iframe src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/ribeirot.serv/;width=250&amp;height=250&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23C4C4C4&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:250px;background:#FFFFFF;" allowtransparency="true"></iframe>
+    <iframe src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/newbaiak/?fref=ts/963936866981152?fref=tsref=hl&amp;width=250&amp;height=250&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23C4C4C4&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:250px;background:#FFFFFF;" allowtransparency="true"></iframe>
 </div>
 
   

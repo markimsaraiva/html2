@@ -62,6 +62,9 @@ if(!$logged)
 					$passB = '<span style="color:red;">Password:</span>';
 					break;
 			}
+			if($error_captcha){
+				$main_content .= 'Verification code is empty or incorrect.<br/>';					
+			}
 				$main_content .= '
 					</div>
 						<div class="BoxFrameHorizontal" style="background-image:url('.$layout_name.'/images/content/box-frame-horizontal.gif);" /></div>
@@ -111,6 +114,11 @@ if(!$logged)
 																			<td class="LabelV120" ><span>'.$passB.'</span></td>
 																			<td><input type="password" name="password_login" size="35" maxlength="29" ></td>
 																		</tr>
+																		<tr> <td class="LabelV" ><span >Re-Captcha:</span></td>
+        <td>
+         <div class="g-recaptcha" data-sitekey="6LcNXhwTAAAAAH3nbANsJ816eMCbTjaoPZrjBA9K"></div>
+        </td>
+       </tr>
 																	</table>
 																	<div style="float: right; font-size: 1px;" >
 																		<input type="hidden" name="page" value="overview" >

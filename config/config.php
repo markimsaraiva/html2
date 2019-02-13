@@ -1,9 +1,9 @@
 <?PHP
 # Account Maker Config
-$config['site']['serverPath'] = "/home/bkmagnata/PROJECT/";
+$config['site']['serverPath'] = "/otserv/baiaknew/";
 $config['site']['useServerConfigCache'] = false;
-$config['site']['worlds'] = array(0 => 'Gran Baiak');
-$towns_list[0] = array(1 => 'Baiak City');
+$config['site']['worlds'] = array(0 => 'BaiakNew');
+$towns_list[0] = array(1 => 'BaiakNew');
 
 $config['site']['outfit_images_url'] = 'images/outfit.php';
 $config['site']['item_images_url'] = '/images/items/';
@@ -55,9 +55,9 @@ Format: number, 0 [disable] or higher
 */
 
 # PAGE: characters.php
-$config['site']['quests'] = array('Annihilator' => 15901,'Inquisition' => 32130 ,'Pits of Inferno' => 32120);
+$config['site']['quests'] = array('Annihilator' => 5000,'Demon Helmet' => 2645,'Pits of Inferno' => 5550);
 $config['site']['show_skills_info'] = true;
-$config['site']['show_vip_storage'] = 1;
+$config['site']['show_vip_storage'] = 0;
 
 # PAGE: guilds.php
 $config['site']['guild_need_level'] = 8;

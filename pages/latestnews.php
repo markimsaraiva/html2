@@ -29,58 +29,10 @@ $main_content .= '
 													</div>
 												<table border="0" cellspacing="3" cellpadding="4" width="100%">
 											<tr>';
-										 // foreach($SQL->query('SELECT `g`.`id` AS `id`, `g`.`name` AS `name`,`g`.`logo_gfx_name` AS `logo`, COUNT(`g`.`name`) as `frags` FROM `killers` k LEFT JOIN `player_killers` pk ON `k`.`id` = `pk`.`kill_id` LEFT JOIN `players` p ON `pk`.`player_id` = `p`.`id` LEFT JOIN `guild_ranks` gr ON `p`.`rank_id` = `gr`.`id` LEFT JOIN `guilds` g ON `gr`.`guild_id` = `g`.`id` WHERE `k`.`unjustified` = 1 AND `k`.`final_hit` = 1 GROUP BY `name` ORDER BY `frags` DESC, `name` ASC LIMIT 0, 4;') as $guild)
-
-
- // INICIO XP RANK SITE
- // funcionando xprank foreach($SQL->query('SELECT * FROM players WHERE deleted = 0 AND group_id = 1 AND account_id != 1 AND account_id != 18 ORDER BY xprank DESC LIMIT 3') as $skills )
-// <AQUI VEM O TD STYLE>
-   // <div align="top">
-						  
-														  
-	    	  	   // <img src="/images/outfit.php?id='.$skills['looktype'].'&addons='.$skills['lookaddons'].'&head='.$skills['lookhead'].'&body='.$skills['lookbody'].'&legs='.$skills['looklegs'].'&feet='.$skills['lookfeet'].'" width="80" height="80" style="width: 80px; height: 80px; position: center; background-position: 0 0; background-repeat: no-repeat; left: 0px; margin-top: -40px;">
-// <br>
- 
- // <a href="?subtopic=characters&name='.$skills['name'].'" class="topfont">
-
-        // <font color="purple">&nbsp;&nbsp;&nbsp;&nbsp;  '.$skills['name'].'</font>
-        // <br>
-        // <small><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level: ('.$skills['level'].')
-		// </font></small>
-		// <br>
-		 // <small><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXPERIENCIA ACUMULADA: ('.$skills['xprank'].')
-	// </font>
-		// </small>
-		
-		
-        // <br>
-      // </a>
-	  
-
-      // </div>
-// <AQUI FECHA O TD STYLE>
- 
- // FIM SISTEMA XP RANK SITE 
- 
- 
-// foreach($SQL->query('SELECT `frags_semana` AS `frags` , `name`, `logo_gfx_name`, `id` FROM `guilds` ORDER BY `frags` DESC, `name` ASC LIMIT 0, 4;') as $guild)
-
-foreach($SQL->query('SELECT `value` FROM `global_storage` WHERE `key` = 123123 ;') as $sto)
-
-foreach($SQL->query('SELECT  `name` , `id` , `frags_semana` as `frags`   FROM `guilds`  WHERE id = '. $sto['value'] .' ;') as $guild)
- 
- 
- 
- 
- 
+												foreach($SQL->query('SELECT `g`.`id` AS `id`, `g`.`name` AS `name`,`g`.`logo_gfx_name` AS `logo`, COUNT(`g`.`name`) as `frags` FROM `killers` k LEFT JOIN `player_killers` pk ON `k`.`id` = `pk`.`kill_id` LEFT JOIN `players` p ON `pk`.`player_id` = `p`.`id` LEFT JOIN `guild_ranks` gr ON `p`.`rank_id` = `gr`.`id` LEFT JOIN `guilds` g ON `gr`.`guild_id` = `g`.`id` WHERE `k`.`unjustified` = 1 AND `k`.`final_hit` = 1 GROUP BY `name` ORDER BY `frags` DESC, `name` ASC LIMIT 0, 4;') as $guild)
 												$main_content .= '              
 													<td style="width: 25%; text-align: center;">
-
-								<a href="?subtopic=guilds&action=show&guild=' . $guild['id'] . '"><img src="/guild_image.php?id=' . $guild['id'] . '" width="64" height="64" border="0"/><br />' . $guild['name'] . '</a><br />' . $guild['frags'] . ' kills
-																						
-
-		   
-		   
+														<a href="?subtopic=guilds&action=show&guild=' . $guild['id'] . '"><img src="/guild_image.php?id=' . $guild['id'] . '" width="64" height="64" border="0"/><br />' . $guild['name'] . '</a><br />' . $guild['frags'] . ' kills
 													</td>';
 												$main_content .= '
 																			</tr>
