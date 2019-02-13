@@ -2,7 +2,7 @@
 date_default_timezone_set('Europe/Berlin');
 session_start();
 ob_start("ob_gzhandler");
-define('DEBUG_DATABASE', true);
+define('DEBUG_DATABASE', false);
 
 //require('./exaBD.php');
 function microtime_float() {
@@ -277,7 +277,7 @@ switch($_REQUEST['subtopic']) {
 	break;  
 
         case "experiencetable";
-                $topic = "Tabela de Experiência";
+                $topic = "Tabela de ExperiÃªncia";
                 $subtopic = "experiencetable";
                 include("experiencetable.php");
         break;
@@ -301,7 +301,7 @@ switch($_REQUEST['subtopic']) {
         break;
        
         case "killstatistics";
-                $topic = "Últimas Mortes";
+                $topic = "Ãšltimas Mortes";
                 $subtopic = "killstatistics";
                 include("killstatistics.php");
         break;
@@ -349,7 +349,7 @@ switch($_REQUEST['subtopic']) {
       break;  
 
         case "confirmacao":
-                $topic = "Confirmação";
+                $topic = "ConfirmaÃ§Ã£o";
                 $subtopic = "confirmacao";
                 include("confirmacao.php");
         break;
@@ -391,7 +391,7 @@ switch($_REQUEST['subtopic']) {
         break;
        
         case "doacao";
-                $subtopic = "doação";
+                $subtopic = "doaÃ§Ã£o";
                 $topic = "Doacao";
                 include("doacao.php");
         break;
