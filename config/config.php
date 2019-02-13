@@ -1,6 +1,6 @@
 <?PHP
 # Account Maker Config
-$config['site']['serverPath'] = "C:/Users/Marcos Saraiva/Documents/Github/G_BK/PROJECT/";
+$config['site']['serverPath'] = "/home/bkmagnata/PROJECT/";
 $config['site']['useServerConfigCache'] = false;
 $config['site']['worlds'] = array(0 => 'Gran Baiak');
 $towns_list[0] = array(1 => 'Baiak City');
