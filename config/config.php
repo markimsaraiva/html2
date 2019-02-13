@@ -1,6 +1,6 @@
 <?PHP
 # Account Maker Config
-$config['site']['serverPath'] = "/otserv/bkmagnata/PROJECT/";
+$config['site']['serverPath'] = "/home/bkmagnata/PROJECT/";
 $config['site']['useServerConfigCache'] = false;
 $config['site']['worlds'] = array(0 => 'BaiakNew');
 $towns_list[0] = array(1 => 'BaiakNew');
